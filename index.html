@@ -5,6 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.2/dist/cdn.min.js"></script>
+    <style>
+      .menu{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: #fff;
+        display: grid;
+        place-content: center;
+      }
+      .header__menuBtn{
+        position: relative;
+        z-index:10;
+      }
+    </style>
     <title>Test menu</title>
   </head>
   <body>
@@ -39,17 +55,17 @@
       consectetur nobis enim.
     </p>
 
-    <d1>
-      <dt>Lorem.</dt>
-      <dd x-show="false">Lorem ipsum dolor sit amet.</dd>
-    </d1>
-    <d1>
-      <dt>Distinctio.</dt>
-      <dd x-show="false">Sapiente, quod voluptates? Aliquam, magnam.</dd>
-    </d1>
-    <d1>
-      <dt>Placeat.</dt>
-      <dd x-show="false">Impedit, doloremque voluptatibus. Recusandae, laboriosam.</dd>
-    </d1>
+    <dl>
+      <dt @click="txtIsOpen = (txtIsOpen === 1) ? 0 : 1">Lorem.</dt>
+      <dd x-show="txtIsOpen === 1">Lorem ipsum dolor sit amet.</dd>
+  </dl>
+  <dl>
+      <dt @click="txtIsOpen = (txtIsOpen === 2) ? 0 : 2">Dolores?</dt>
+      <dd x-show="txtIsOpen === 2">Corrupti corporis nostrum perferendis necessitatibus.</dd>
+  </dl>
+  <dl>
+      <dt @click="txtIsOpen = (txtIsOpen === 3) ? 0 : 3">Voluptatibus?</dt>
+      <dd x-show="txtIsOpen === 3">Omnis laborum fuga molestiae voluptatem.</dd>
+  </dl>
   </body>
 </html>
