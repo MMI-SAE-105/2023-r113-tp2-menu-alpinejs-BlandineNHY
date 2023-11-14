@@ -56,27 +56,29 @@
     </p>
 <dl x-data="{isOpen:false}">
   <dt>
-    <button @click="{isOpen:false}">
+    <button @click="isOpen = ! isOpen">
       Lorem.
     </button>
     </dt>
-  <dd>Lorem ipsum dolor sit amet.</dd>
+  <dd x-show="isOpen">Lorem ipsum dolor sit amet.</dd>
 </dl>
+
 <dl x-data="{isOpen:false}">
   <dt>
-    <button @click="{isOpen:false}">
+    <button @click="isOpen = ! isOpen">
       Repellat!
     </button>
     </dt>
-  <dd>Nam in eligendi maxime ea.</dd>
+  <dd x-show="isOpen">Nam in eligendi maxime ea.</dd>
 </dl>
+
 <dl x-data="{isOpen:false}">
   <dt>
-    <button @click="{isOpen:false}">
+    <button @click="isOpen = ! isOpen">
       Tenetur?
     </button>
     </dt>
-  <dd>Aspernatur dolorum nam accusamus reiciendis.</dd>
+  <dd  x-show="isOpen">Aspernatur dolorum nam accusamus reiciendis.</dd>
 </dl>
 
   </body>
