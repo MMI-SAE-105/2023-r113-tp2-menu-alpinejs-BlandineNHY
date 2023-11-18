@@ -11,8 +11,8 @@
         <h4>menu</h4>
         <h2><a href="../index.html">Accueil du site</a></h2>
         <ul>
-            <li><a href="../dogs/dog1.html">chat 1</a></li>
-            <li><a href="../dogs/dog2.html">chat 2</a></li>
+            <li><a href="../dogs/dog1.html">chien 1</a></li>
+            <li><a href="../dogs/dog2.html">chien 2</a></li>
         </ul>
     </nav>
 
@@ -20,3 +20,19 @@
 
 </body>
 </html>
+
+<style>
+    .media--fullwidth {
+        width: 100%;
+        height: auto;
+    }
+    nav>h4::before {
+        content: url("../../public/icones/book.svg");
+    }
+    nav>ul>li>a::before {
+        content: url("../../public/icones/bag-plus.svg");
+    }
+    nav>ul>li>ul>li>a::before {
+        content: url("../../public/icones/archive.svg");
+    }
+    </style>
