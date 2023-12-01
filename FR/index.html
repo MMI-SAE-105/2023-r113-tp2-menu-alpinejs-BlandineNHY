@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr" x-data="{menuIsOpen: false}" :class="noscroll:menuIsOpen">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.2/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="src/css/style.css">
+    <style>
+      .menu{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: #fff;
+        display: grid;
+        place-content: center;
+      }
+      .header__menuBtn{
+        position: relative;
+        z-index:10;
+      }
+    </style>
+    <title>Test menu</title>
+  </head>
+  <body>
+    <!-- https://emmet.io/ -->
+    <!-- header>h1{Test de menu} -->
+    <header>
+      <button aria-controls="mainNav"
+      @click="menuIsOpen = ! menuIsOpen"
+      class="header__menuBtn"
+      >
+        menu
+      </button>
+      <h1>Test de menu</h1>
+      <nav id="mainNav"
+      x-show="menuIsOpen"
+      x-transition.duration800ms
+      class="menu"
+      >
+        <ul>
+          <li><a href="./cats/index.html">Accueil des chats</a></li>
+          <li><a href="./dogs/index.html">Accueil des chiens</a></li>
+          <li><a href="#">item 3</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- h2>lorem2^p>lorem -->
+    <h2>Lorem, ipsum.</h2>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat
+      mollitia adipisci alias error laboriosam numquam incidunt magni eum eos
+      nemo aliquid pariatur quam voluptates animi laudantium, aperiam
+      consectetur nobis enim.
+    </p>
+<dl x-data="{isOpen:false}">
+  <dt>
+    <button @click="isOpen = ! isOpen">
+      Lorem.
+    </button>
+    </dt>
+  <dd x-show="isOpen">Lorem ipsum dolor sit amet.</dd>
+</dl>
+
+<dl x-data="{isOpen:false}">
+  <dt>
+    <button @click="isOpen = ! isOpen">
+      Repellat!
+    </button>
+    </dt>
+  <dd x-show="isOpen">Nam in eligendi maxime ea.</dd>
+</dl>
+
+<dl x-data="{isOpen:false}">
+  <dt>
+    <button @click="isOpen = ! isOpen">
+      Tenetur?
+    </button>
+    </dt>
+  <dd  x-show="isOpen">Aspernatur dolorum nam accusamus reiciendis.</dd>
+</dl>
+
+  </body>
+</html>
